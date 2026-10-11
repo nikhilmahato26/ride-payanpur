@@ -1,12 +1,14 @@
 import { useState } from 'react';
-import { Calendar, Clock, Bike, MessageCircle, Phone, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { Calendar, Clock, Bike, MessageCircle, Phone, CheckCircle2, ShieldCheck, Zap } from 'lucide-react';
 import { vehicles, businessInfo, createCustomBookingWhatsAppLink } from '../data/vehicles';
 
 export const QuickBookingWidget = () => {
-  const [selectedVehicle, setSelectedVehicle] = useState('TVS Jupiter');
+  const [selectedVehicle, setSelectedVehicle] = useState(vehicles[0]?.name || 'TVS Jupiter');
   const [duration, setDuration] = useState('1 Day');
   const [pickupDate, setPickupDate] = useState('');
   const [notes, setNotes] = useState('');
+
+  const currentVehicleObj = vehicles.find(v => v.name === selectedVehicle);
 
   const handleSubmitWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -14,7 +16,8 @@ export const QuickBookingWidget = () => {
       vehicleName: selectedVehicle,
       duration: duration,
       pickupDate: pickupDate || 'Earliest available date',
-      notes: notes.trim() ? notes.trim() : undefined
+      notes: notes.trim() ? notes.trim() : undefined,
+      pricePerDay: currentVehicleObj?.pricePerDay
     });
     window.open(link, '_blank');
   };
@@ -41,7 +44,7 @@ export const QuickBookingWidget = () => {
           {/* Left Info Column */}
           <div>
             <div className="badge-dark" style={{ borderLeftColor: '#F36B21', marginBottom: '14px' }}>
-              <span>Instant Availability Inquiry</span>
+              <span>Instant WhatsApp Booking</span>
             </div>
 
             <h2 style={{
@@ -63,32 +66,32 @@ export const QuickBookingWidget = () => {
               lineHeight: 1.6,
               marginBottom: '26px'
             }}>
-              Planning a visit to Kavvayi backwaters, Ezhimala hills, or exploring Payyanur town? Send us your preferred dates and vehicle to get quick rental rates and availability.
+              Planning a visit to Kavvayi backwaters, Ezhimala hills, or exploring Payyanur town? Reserve a brand new 2026 bike or scooter with transparent per-day pricing and a 120 km/day limit.
             </p>
 
             {/* Quick Benefits Checklist */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '30px' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={18} color="#F36B21" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <Zap size={18} color="#F36B21" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>Zero Advance Commitment for Inquiries</strong>
-                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Check vehicle availability and get genuine quotes with zero pressure.</span>
+                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>120 km / Day Limit Included</strong>
+                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Generous daily allowance perfect for town travels and coastal day trips.</span>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                 <CheckCircle2 size={18} color="#F36B21" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>Quick Document Verification</strong>
-                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Only valid Driving License & Government ID proof required.</span>
+                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>Brand New 2026 Registered Fleet</strong>
+                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Freshly delivered, impeccably maintained scooters and Royal Enfield 350.</span>
                 </div>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
-                <CheckCircle2 size={18} color="#F36B21" style={{ flexShrink: 0, marginTop: '2px' }} />
+                <ShieldCheck size={18} color="#16A34A" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
-                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>Central Pickup Location</strong>
-                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Easily accessible station at Ajwa Tower, Pallihaji Road, Payyanur.</span>
+                  <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.92rem' }}>Government of Kerala Authorized</strong>
+                  <span style={{ color: '#A3A3A3', fontSize: '0.82rem' }}>Quick verification with valid Driving License and Government ID.</span>
                 </div>
               </div>
             </div>
@@ -143,7 +146,7 @@ export const QuickBookingWidget = () => {
               textTransform: 'uppercase',
               letterSpacing: '0.06em'
             }}>
-              WhatsApp Instant Connect
+              Instant WhatsApp Connect
             </div>
 
             <h3 style={{
@@ -152,10 +155,10 @@ export const QuickBookingWidget = () => {
               fontWeight: 800,
               marginBottom: '6px'
             }}>
-              Quick Rental Inquiry
+              Quick Rental Reservation
             </h3>
             <p style={{ fontSize: '0.84rem', color: '#A3A3A3', marginBottom: '24px' }}>
-              Fill your plan details below to instantly formulate your WhatsApp enquiry message.
+              Select your vehicle and dates to send your booking message directly on WhatsApp.
             </p>
 
             <form onSubmit={handleSubmitWhatsApp}>
@@ -166,7 +169,7 @@ export const QuickBookingWidget = () => {
                   style={{
                     display: 'flex',
                     alignItems: 'center',
-                    gap: '6px',
+                    justifyContent: 'space-between',
                     fontSize: '0.82rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
@@ -175,8 +178,15 @@ export const QuickBookingWidget = () => {
                     marginBottom: '8px'
                   }}
                 >
-                  <Bike size={15} color="#F36B21" />
-                  Select Preferred Vehicle
+                  <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <Bike size={15} color="#F36B21" />
+                    Select Vehicle
+                  </span>
+                  {currentVehicleObj && (
+                    <span style={{ color: '#F36B21', fontSize: '0.82rem', fontWeight: 800 }}>
+                      ₹{currentVehicleObj.pricePerDay}/day • 120 km limit
+                    </span>
+                  )}
                 </label>
                 <select
                   id="booking-vehicle"
@@ -196,11 +206,9 @@ export const QuickBookingWidget = () => {
                 >
                   {vehicles.map((v) => (
                     <option key={v.id} value={v.name}>
-                      {v.name} ({v.category} — {v.engine})
+                      {v.name} ({v.modelYear} Model) — ₹{v.pricePerDay}/day ({v.unitsAvailable} in stock)
                     </option>
                   ))}
-                  <option value="Any Available Scooter">Any Available Scooter</option>
-                  <option value="Any Available Motorcycle">Any Available Motorcycle</option>
                 </select>
               </div>
 
@@ -283,11 +291,11 @@ export const QuickBookingWidget = () => {
                       outline: 'none'
                     }}
                   >
-                    <option value="1 Day">1 Day</option>
-                    <option value="2 Days">2 Days</option>
-                    <option value="3 to 5 Days">3 to 5 Days</option>
-                    <option value="1 Week">1 Week</option>
-                    <option value="Long Term / Monthly">Long Term</option>
+                    <option value="1 Day">1 Day (120 km limit)</option>
+                    <option value="2 Days">2 Days (240 km limit)</option>
+                    <option value="3 to 5 Days">3 to 5 Days (Multi-day package)</option>
+                    <option value="1 Week">1 Week (Weekly special)</option>
+                    <option value="Long Term / Monthly">Long Term Hire</option>
                   </select>
                 </div>
               </div>
@@ -328,21 +336,23 @@ export const QuickBookingWidget = () => {
                 />
               </div>
 
-              {/* Pricing Notice */}
+              {/* Pricing & Km Policy Notice */}
               <div style={{
                 backgroundColor: 'rgba(243, 107, 33, 0.1)',
-                border: '1px solid rgba(243, 107, 33, 0.3)',
-                padding: '10px 14px',
+                border: '1px solid rgba(243, 107, 33, 0.35)',
+                padding: '12px 14px',
                 borderRadius: '6px',
-                fontSize: '0.76rem',
+                fontSize: '0.78rem',
                 color: '#FFB285',
                 marginBottom: '20px',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '8px'
+                gap: '10px'
               }}>
-                <ShieldAlert size={16} color="#F36B21" style={{ flexShrink: 0 }} />
-                <span>Contact us for rental rates and availability. Prices are shared directly via WhatsApp or phone call.</span>
+                <Zap size={18} color="#F36B21" style={{ flexShrink: 0 }} />
+                <span>
+                  <strong>120 km/day driving limit</strong> included with all rentals. Clean helmet provided complimentary.
+                </span>
               </div>
 
               {/* Submit CTA */}
@@ -359,7 +369,7 @@ export const QuickBookingWidget = () => {
                 }}
               >
                 <MessageCircle size={19} />
-                <span>Send Inquiry On WhatsApp</span>
+                <span>Book on WhatsApp {currentVehicleObj ? `(@ ₹${currentVehicleObj.pricePerDay}/day)` : ''}</span>
               </button>
             </form>
           </div>

@@ -25,7 +25,7 @@ export const attractions: Attraction[] = [
     rideTime: "20 mins ride",
     tag: "Historic & Coastal Heights",
     description: "A prominent historic hill towering over the Arabian Sea, featuring winding scenic roads, Mount Dilli lighthouse, and viewpoints adjacent to the Indian Naval Academy.",
-    recommendedVehicle: "Royal Enfield 350 / Bajaj Pulsar"
+    recommendedVehicle: "Royal Enfield 350 / TVS NTorq 125"
   },
   {
     id: "valiyaparamba-beach",
@@ -34,7 +34,7 @@ export const attractions: Attraction[] = [
     rideTime: "25 mins ride",
     tag: "Untouched Beach & Palms",
     description: "A long pristine barrier spit sandwiched between tranquil backwaters and the roaring Arabian Sea, offering panoramic coastal motorable roads.",
-    recommendedVehicle: "TVS NTorq / Honda Activa"
+    recommendedVehicle: "TVS NTorq 125 / Honda Dio"
   },
   {
     id: "madayipara",
@@ -52,7 +52,7 @@ export const attractions: Attraction[] = [
     rideTime: "22 mins ride",
     tag: "Pine Groves & Sea Breeze",
     description: "Serene beach nestled between casuarina pine tree groves and the sea, offering pedal boating, cool breeze, and relaxed afternoon picnics.",
-    recommendedVehicle: "Yamaha Fascino / Suzuki Access 125"
+    recommendedVehicle: "Yamaha Fascino 125 / Suzuki Access 125"
   },
   {
     id: "bekal-fort",
@@ -61,7 +61,7 @@ export const attractions: Attraction[] = [
     rideTime: "50 mins ride",
     tag: "Historic Fort & Coastal Highway",
     description: "Take the scenic North Malabar highway cruise up to the massive keyhole-shaped Bekal Fort overlooking panoramic crashing ocean waves.",
-    recommendedVehicle: "Royal Enfield 350 / Bajaj Pulsar"
+    recommendedVehicle: "Royal Enfield 350 / Suzuki Access 125"
   }
 ];
 
@@ -69,7 +69,7 @@ export const rentalSteps = [
   {
     step: "01",
     title: "Pick Your Vehicle",
-    description: "Browse our reliable fleet of automatic scooters or geared motorcycles tailored to your trip."
+    description: "Select from our brand new 2026 fleet of automatic scooters or Royal Enfield 350 starting at ₹699/day."
   },
   {
     step: "02",
@@ -84,11 +84,15 @@ export const rentalSteps = [
   {
     step: "04",
     title: "Ride Easy, Ride Safe",
-    description: "Enjoy complete freedom exploring Kannur's coastal highways, temples, backwaters, and pristine beaches."
+    description: "Enjoy complete freedom with 120 km/day mileage allowance exploring coastal roads and backwaters."
   }
 ];
 
 export const rentalRequirements = [
+  {
+    title: "120 km / Day Free Limit",
+    description: "Generous daily limit of 120 km included with every booking. Extra kilometers available at standard nominal rates."
+  },
   {
     title: "Valid Driving License",
     description: "Original two-wheeler driving license is required for verification at time of pickup."
@@ -103,6 +107,6 @@ export const rentalRequirements = [
   },
   {
     title: "Government Authorized",
-    description: "Ride with peace of mind knowing you rent from an officially authorized service in Payyanur."
+    description: "Ride with peace of mind knowing you rent from an officially authorized service in Payyanur (GST: 32BHEPK7961E1ZF)."
   }
 ];

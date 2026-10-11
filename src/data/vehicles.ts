@@ -12,9 +12,51 @@ export interface Vehicle {
   highlight: string;
   description: string;
   features: string[];
+  pricePerDay: number;
+  modelYear: number;
+  unitsAvailable: number;
+  dailyKmLimit: number;
 }
 
 export const vehicles: Vehicle[] = [
+  {
+    id: "honda-dio",
+    name: "Honda Dio",
+    category: "Scooter",
+    image: "/vehicles/honda-dio.jpg",
+    engine: "110 cc PGM-FI",
+    transmission: "Automatic (CVT)",
+    mileageEstimate: "Zippy & Highly Economical",
+    startingType: "Electric & Kick Start",
+    fuelCapacity: "5.3 Liters",
+    idealFor: "Quick Commutes, Beach Trips & Town Rides",
+    highlight: "Sporty Moto-Scooter Styling & Agility",
+    description: "Lightweight and stylish moto-scooter with Honda's trusted refined engine, combi-braking, LED headlamp, and swift handling around town and beach roads.",
+    features: ["120 km/Day Included", "Brand New 2026 Model", "Combi-Brake System (CBS)", "Sporty Aerodynamic Body"],
+    pricePerDay: 699,
+    modelYear: 2026,
+    unitsAvailable: 1,
+    dailyKmLimit: 120
+  },
+  {
+    id: "yamaha-fascino",
+    name: "Yamaha Fascino 125",
+    category: "Scooter",
+    image: "/vehicles/yamaha-fascino.jpg",
+    engine: "125 cc Fi Hybrid",
+    transmission: "Automatic (CVT)",
+    mileageEstimate: "Ultra Light & Efficient",
+    startingType: "Electric & Kick Start",
+    fuelCapacity: "5.2 Liters",
+    idealFor: "Scenic Photography & Leisure Trips",
+    highlight: "Retro-Modern European Elegance",
+    description: "Classy vintage-inspired design complemented by lightweight agile handling and refined fuel-injected performance. Perfect for cruising to Kavvayi backwaters.",
+    features: ["120 km/Day Included", "Brand New 2026 Fleet", "Lightweight Curb Weight", "Smooth Fi Hybrid Engine"],
+    pricePerDay: 699,
+    modelYear: 2026,
+    unitsAvailable: 2,
+    dailyKmLimit: 120
+  },
   {
     id: "tvs-jupiter",
     name: "TVS Jupiter",
@@ -25,10 +67,14 @@ export const vehicles: Vehicle[] = [
     mileageEstimate: "Economy Friendly",
     startingType: "Electric & Kick Start",
     fuelCapacity: "6 Liters",
-    idealFor: "City Commute & Casual Rides",
+    idealFor: "City Commute & Casual Coastal Rides",
     highlight: "Smooth Comfort & Generous Legroom",
     description: "Reliable and ultra-comfortable commuter scooter featuring plush seating, telescopic suspension, and easy handling through Payyanur town and coastal stretches.",
-    features: ["All-Day Riding Comfort", "Front & Under-Seat Storage", "External Fuel Fill", "Telescopic Suspension"]
+    features: ["120 km/Day Included", "Brand New 2026 Fleet", "Front & Under-Seat Storage", "Telescopic Suspension"],
+    pricePerDay: 799,
+    modelYear: 2026,
+    unitsAvailable: 3,
+    dailyKmLimit: 120
   },
   {
     id: "tvs-ntorq-125",
@@ -43,52 +89,30 @@ export const vehicles: Vehicle[] = [
     idealFor: "Youthful Riders & Dynamic Coastal Tours",
     highlight: "Sporty Acceleration & Striking Decals",
     description: "Aerodynamic sports scooter with a punchy 125cc engine, razor-sharp styling, race-tuned dynamics, and front disc brake for riders who crave an energetic experience.",
-    features: ["Punchy 125cc Acceleration", "Front Disc Brake", "Sporty Digital Console", "Aggressive Street Design"]
+    features: ["120 km/Day Included", "Brand New 2026 Fleet", "Front Disc Brake", "Sporty Digital Console"],
+    pricePerDay: 799,
+    modelYear: 2026,
+    unitsAvailable: 4,
+    dailyKmLimit: 120
   },
   {
-    id: "honda-activa",
-    name: "Honda Activa",
+    id: "suzuki-access-125",
+    name: "Suzuki Access 125",
     category: "Scooter",
-    image: "/vehicles/honda-activa.jpg",
-    engine: "110 cc HET",
+    image: "/vehicles/suzuki-access-125.jpg",
+    engine: "125 cc SEP",
     transmission: "Automatic (CVT)",
-    mileageEstimate: "High Mileage",
+    mileageEstimate: "Best-in-Class Balance",
     startingType: "Electric & Kick Start",
-    fuelCapacity: "5.3 Liters",
-    idealFor: "Solo Riders, Couples & Daily Errands",
-    highlight: "India's Most Trusted Scooter",
-    description: "Durable all-metal body and legendary Honda reliability. Easy to maneuver, exceptionally fuel-efficient, and ideal for stress-free exploration of Payyanur.",
-    features: ["All-Metal Body Durability", "Silent ACG Starter", "Combi-Brake System (CBS)", "Spacious Footboard"]
-  },
-  {
-    id: "yamaha-fascino",
-    name: "Yamaha Fascino",
-    category: "Scooter",
-    image: "/vehicles/yamaha-fascino.jpg",
-    engine: "125 cc Fi Hybrid",
-    transmission: "Automatic (CVT)",
-    mileageEstimate: "Ultra Light & Efficient",
-    startingType: "Electric & Kick Start",
-    fuelCapacity: "5.2 Liters",
-    idealFor: "Scenic Photography & Leisure Trips",
-    highlight: "Retro-Modern European Elegance",
-    description: "Classy vintage-inspired design complemented by lightweight agile handling and refined fuel-injected performance. Perfect for cruising to Kavvayi backwaters.",
-    features: ["Lightweight Curb Weight", "Retro Chrome Styling", "Smooth Blue Core Engine", "Ergonomic Stepped Seat"]
-  },
-  {
-    id: "bajaj-pulsar",
-    name: "Bajaj Pulsar",
-    category: "Motorcycle",
-    image: "/vehicles/bajaj-pulsar.jpg",
-    engine: "150 cc DTS-i",
-    transmission: "5-Speed Manual",
-    mileageEstimate: "High Performance Touring",
-    startingType: "Electric Start",
-    fuelCapacity: "15 Liters",
-    idealFor: "Highway Cruising & Hill Ascents",
-    highlight: "Muscular Street Power & Long-Range Tank",
-    description: "A muscular street motorcycle engineered for riders seeking highway stability, responsive power delivery, and effortless overtaking on Malabar coastal roads.",
-    features: ["150cc DTS-i Performance", "Twin Disc Brakes", "Nitrox Rear Suspension", "15L Long Range Fuel Tank"]
+    fuelCapacity: "5 Liters",
+    idealFor: "City Riding & Medium-Range Excursions",
+    highlight: "Class-Leading Power & Retro Chrome LED",
+    description: "Premium Japanese engineering delivering responsive power, a wide comfortable seat, retro chrome LED headlamp, and superior fuel economy.",
+    features: ["120 km/Day Included", "Brand New 2026 Fleet", "Chrome LED Headlight", "Extra-Long Seat"],
+    pricePerDay: 899,
+    modelYear: 2026,
+    unitsAvailable: 3,
+    dailyKmLimit: 120
   },
   {
     id: "royal-enfield-350",
@@ -103,24 +127,20 @@ export const vehicles: Vehicle[] = [
     idealFor: "Coastal Road Trips & Long Leisure Tours",
     highlight: "Timeless Heritage Thump & Road Presence",
     description: "The iconic cruiser with effortless low-end torque, classic vintage styling, wide touring saddle, and unmatched road presence for unforgettable journeys along the Arabian coast.",
-    features: ["Signature Single-Cylinder Thump", "Dual-Channel ABS", "Plush Touring Ergonomics", "Heavy-Metal Road Stability"]
-  },
-  {
-    id: "suzuki-access-125",
-    name: "Suzuki Access 125",
-    category: "Scooter",
-    image: "/vehicles/suzuki-access-125.jpg",
-    engine: "125 cc SEP",
-    transmission: "Automatic (CVT)",
-    mileageEstimate: "Best-in-Class Balance",
-    startingType: "Electric & Kick Start",
-    fuelCapacity: "5 Liters",
-    idealFor: "City Riding & Medium-Range Excursions",
-    highlight: "Class-Leading Power-to-Weight Ratio",
-    description: "Premium Japanese engineering delivering responsive power, a wide comfortable seat, retro chrome LED headlamp, and superior fuel economy.",
-    features: ["125cc SEP Engine Technology", "Chrome LED Headlight", "Extra-Long Seat", "Easy Multi-Function Key"]
+    features: ["120 km/Day Included", "Brand New 2026 Model", "Dual-Channel ABS", "Signature Touring Saddle"],
+    pricePerDay: 1499,
+    modelYear: 2026,
+    unitsAvailable: 1,
+    dailyKmLimit: 120
   }
 ];
+
+export const fleetSummary = {
+  totalVehicles: vehicles.reduce((sum, v) => sum + v.unitsAvailable, 0), // 14
+  startingPrice: Math.min(...vehicles.map(v => v.pricePerDay)), // 699
+  dailyKmLimit: 120,
+  fleetModelYear: 2026
+};
 
 export const businessInfo = {
   name: "RIDE PAYYANUR",
@@ -139,11 +159,15 @@ export const businessInfo = {
     "Government of Kerala Authorized"
   ],
   workingHours: "8:00 AM – 8:30 PM (All 7 Days)",
-  officialWebsite: "ride-payyanur.grexa.site"
+  officialWebsite: "ride-payyanur.grexa.site",
+  dailyKmLimit: 120
 };
 
-export const createVehicleWhatsAppLink = (vehicleName: string): string => {
-  const message = `Hello Ride Payyanur, I would like to enquire about renting the ${vehicleName}. Please share the rental price, availability, and booking requirements.`;
+export const createVehicleWhatsAppLink = (vehicleName: string, pricePerDay?: number): string => {
+  const targetVehicle = vehicles.find(v => v.name.toLowerCase() === vehicleName.toLowerCase());
+  const price = pricePerDay || targetVehicle?.pricePerDay;
+  const priceText = price ? ` at ₹${price}/day (120 km/day limit)` : ' (120 km/day limit)';
+  const message = `Hello Ride Payyanur, I would like to book the ${vehicleName} (2026 Model)${priceText}. Please confirm availability and booking procedure.`;
   return `https://wa.me/${businessInfo.whatsappClean}?text=${encodeURIComponent(message)}`;
 };
 
@@ -152,13 +176,16 @@ export const createCustomBookingWhatsAppLink = (params: {
   duration: string;
   pickupDate: string;
   notes?: string;
+  pricePerDay?: number;
 }): string => {
-  const message = `Hello Ride Payyanur, I am interested in renting a two-wheeler:
-- Vehicle: ${params.vehicleName || 'Open to recommendations'}
+  const priceSnippet = params.pricePerDay ? ` (Rate: ₹${params.pricePerDay}/day)` : '';
+  const message = `Hello Ride Payyanur, I would like to book a rental vehicle:
+- Vehicle: ${params.vehicleName || 'Open to recommendations'}${priceSnippet}
 - Pickup Date: ${params.pickupDate || 'Earliest available'}
 - Duration: ${params.duration || '1 Day'}
+- Daily Limit: 120 km/day
 ${params.notes ? `- Note: ${params.notes}` : ''}
 
-Please share rental rates, availability, and documents needed. Thank you!`;
+Please confirm availability and pickup details. Thank you!`;
   return `https://wa.me/${businessInfo.whatsappClean}?text=${encodeURIComponent(message)}`;
 };

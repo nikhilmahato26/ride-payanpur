@@ -130,12 +130,12 @@ export const Hero: React.FC = () => {
                   letterSpacing: '0.04em'
                 }}
               >
-                <span>Explore Our Fleet</span>
+                <span>Explore Fleet & Rates</span>
                 <ArrowRight size={18} />
               </a>
 
               <a
-                href={`https://wa.me/${businessInfo.whatsappClean}?text=${encodeURIComponent('Hello Ride Payyanur, I would like to enquire about renting a bike or scooter in Payyanur.')}`}
+                href={`https://wa.me/${businessInfo.whatsappClean}?text=${encodeURIComponent('Hello Ride Payyanur, I would like to book a 2026 model bike or scooter (from ₹699/day with 120 km/day limit).')}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="hero-whatsapp-enquire-btn"
@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
                 }}
               >
                 <MessageCircle size={19} />
-                <span>WhatsApp to Enquire</span>
+                <span>Book on WhatsApp</span>
               </a>
             </div>
 
@@ -160,19 +160,19 @@ export const Hero: React.FC = () => {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <CheckCircle2 size={16} color="#F36B21" />
-                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 500 }}>Well-Maintained Fleet</span>
+                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>120 km/Day Included</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <CheckCircle2 size={16} color="#F36B21" />
-                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 500 }}>Helmets Provided</span>
+                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>Rates from ₹699 / Day</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <CheckCircle2 size={16} color="#F36B21" />
-                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 500 }}>Instant Documentation</span>
+                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>Brand New 2026 Fleet</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <MapPin size={16} color="#F36B21" />
-                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 500 }}>Ajwa Tower, Payyanur</span>
+                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>Ajwa Tower, Payyanur</span>
               </div>
             </div>
           </div>
@@ -240,7 +240,7 @@ export const Hero: React.FC = () => {
                     fontSize: '0.98rem',
                     fontWeight: 800
                   }}>
-                    Scooters & Motorcycles Ready to Rent
+                    From ₹699/Day • 120 km Included
                   </div>
                 </div>
 
@@ -260,7 +260,7 @@ export const Hero: React.FC = () => {
                     flexShrink: 0
                   }}
                 >
-                  View All (7)
+                  View 14 Bikes
                 </a>
               </div>
             </div>
