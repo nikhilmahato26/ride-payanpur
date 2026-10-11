@@ -79,7 +79,7 @@ export const rentalSteps = [
   {
     step: "03",
     title: "Instant Key Handover",
-    description: "Collect your sanitized vehicle with helmet right from our convenient location at Ajwa Tower, Payyanur."
+    description: "Collect your sanitized vehicle with helmet right from our convenient location at Payyanur New Bus Stand (Parking Area)."
   },
   {
     step: "04",

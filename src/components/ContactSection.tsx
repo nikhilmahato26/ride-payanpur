@@ -32,7 +32,7 @@ export const ContactSection = () => {
           <div className="accent-line accent-line-center" />
 
           <p style={{ fontSize: '1.05rem', color: '#666666', lineHeight: 1.6 }}>
-            Visit our hub at Ajwa Tower or reach out instantly via Phone or WhatsApp for rental rates and availability.
+            Visit our hub at Payyanur New Bus Stand (Parking Area) or reach out instantly via Phone or WhatsApp for rental rates and vehicle bookings.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export const ContactSection = () => {
                     {businessInfo.address}
                   </div>
                   <div style={{ fontSize: '0.78rem', color: '#666666', marginTop: '2px' }}>
-                    Nearby Landmark: Near Central Payyanur town, walkable from key transit hubs.
+                    Nearby Landmark: Opposite Kokkanisseri Road, Payyanur New Bus Stand parking area.
                   </div>
                 </div>
               </div>
@@ -279,11 +279,11 @@ export const ContactSection = () => {
                   fontWeight: 800,
                   color: '#FFFFFF'
                 }}>
-                  How to Reach Ajwa Tower
+                  How to Reach Us
                 </h4>
               </div>
               <p style={{ fontSize: '0.84rem', color: '#A3A3A3' }}>
-                Centrally located on Pallihaji Road in Payyanur town, Kannur District, Kerala.
+                Payyanur New Bus Stand (Parking Area), Opp. Kokkanisseri Road, Payyanur, Kerala – 670307.
               </p>
             </div>
 
@@ -308,17 +308,17 @@ export const ContactSection = () => {
               </div>
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', fontSize: '0.82rem', marginBottom: '20px' }}>
                 <div style={{ padding: '8px 12px', backgroundColor: '#262626', borderRadius: '4px' }}>
-                  <div style={{ color: '#888' }}>Payyanur Railway Stn</div>
-                  <strong style={{ color: '#FFF' }}>~ 2.5 km (6 mins)</strong>
+                  <div style={{ color: '#888' }}>Payyanur New Bus Stand</div>
+                  <strong style={{ color: '#22C55E' }}>0 mins (In Parking Area)</strong>
                 </div>
                 <div style={{ padding: '8px 12px', backgroundColor: '#262626', borderRadius: '4px' }}>
-                  <div style={{ color: '#888' }}>Payyanur Bus Stand</div>
-                  <strong style={{ color: '#FFF' }}>~ 800 m (3 mins)</strong>
+                  <div style={{ color: '#888' }}>Payyanur Railway Stn</div>
+                  <strong style={{ color: '#FFF' }}>~ 2.5 km (6 mins ride)</strong>
                 </div>
               </div>
 
               <a
-                href="https://maps.google.com/?q=Payyanur+Kerala"
+                href="https://maps.google.com/?q=Payyanur+New+Bus+Stand+Kokkanisseri+Road+Payyanur"
                 target="_blank"
                 rel="noopener noreferrer"
                 id="contact-get-directions-btn"

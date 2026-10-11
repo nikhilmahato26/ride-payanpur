@@ -145,8 +145,9 @@ export const fleetSummary = {
 export const businessInfo = {
   name: "RIDE PAYYANUR",
   category: "Bike & Scooter Rental",
-  address: "Ajwa Tower, Pallihaji Road, Payyanur, Kerala – 670307",
-  locationShort: "Payyanur, Kerala",
+  address: "Payyanur New Bus Stand (Parking Area), Opp. Kokkanisseri Road, Payyanur, Kerala – 670307",
+  locationShort: "Payyanur New Bus Stand, Kerala",
+  landmark: "Opposite Kokkanisseri Road, Payyanur New Bus Stand Parking Area",
   primaryPhone: "+91 9447255915",
   primaryPhoneClean: "+919447255915",
   whatsappPhone: "+91 9745003733",

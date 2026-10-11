@@ -172,7 +172,7 @@ export const Hero: React.FC = () => {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <MapPin size={16} color="#F36B21" />
-                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>Ajwa Tower, Payyanur</span>
+                <span style={{ fontSize: '0.84rem', color: '#D4D4D4', fontWeight: 600 }}>Payyanur New Bus Stand</span>
               </div>
             </div>
           </div>

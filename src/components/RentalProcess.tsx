@@ -152,7 +152,7 @@ export const RentalProcess: React.FC = () => {
                 Rental Requirements & Policies
               </h3>
               <p style={{ color: '#A3A3A3', fontSize: '0.92rem' }}>
-                Please carry these original documents when picking up your vehicle at Ajwa Tower, Payyanur.
+                Please carry these original documents when picking up your vehicle at Payyanur New Bus Stand (Parking Area).
               </p>
             </div>
 

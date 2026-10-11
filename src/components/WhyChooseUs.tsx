@@ -17,7 +17,7 @@ export const WhyChooseUs: React.FC = () => {
     {
       icon: <MapPin size={28} color="#F36B21" />,
       title: "Central Payyanur Location",
-      description: "Conveniently situated at Ajwa Tower, Pallihaji Road, easily accessible from railway stations and private/KSRTC bus hubs."
+      description: "Conveniently situated at Payyanur New Bus Stand (Parking Area), Opp. Kokkanisseri Road, directly accessible upon arriving into town."
     },
     {
       icon: <Wrench size={28} color="#F36B21" />,

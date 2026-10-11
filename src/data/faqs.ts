@@ -6,7 +6,7 @@ export interface FAQItem {
 export const faqs: FAQItem[] = [
   {
     question: "Where is Ride Payyanur located?",
-    answer: "We are centrally located at Ajwa Tower, Pallihaji Road, Payyanur, Kerala – 670307, within quick reach from Payyanur Railway Station and main bus stands."
+    answer: "We are conveniently located at Payyanur New Bus Stand (Parking Area), Opp. Kokkanisseri Road, Payyanur, Kerala – 670307, right where transit buses arrive and just minutes from Payyanur Railway Station."
   },
   {
     question: "What are your daily rental rates?",

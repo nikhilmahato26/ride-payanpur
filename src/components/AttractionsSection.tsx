@@ -91,7 +91,7 @@ export const AttractionsSection: React.FC = () => {
                 Kavvayi Backwaters Island Bridge Ride
               </h3>
               <p style={{ fontSize: '0.94rem', color: '#E0E0E0', lineHeight: 1.5, marginBottom: '16px' }}>
-                Just a 10-minute scooter ride from our Ajwa Tower hub. Cruise along the backwaters, view traditional houseboats, and enjoy the cool Malabar sea breeze.
+                Just a 10-minute scooter ride from our Payyanur New Bus Stand hub. Cruise along the backwaters, view traditional houseboats, and enjoy the cool Malabar sea breeze.
               </p>
               <a
                 href={`https://wa.me/${businessInfo.whatsappClean}?text=${encodeURIComponent('Hello Ride Payyanur, I want to rent a scooter for exploring Kavvayi backwaters. Please share rates and details.')}`}

@@ -132,7 +132,7 @@ export const ContactBar = () => {
                 Rental Station
               </div>
               <div style={{ fontFamily: 'var(--font-heading)', fontSize: '0.94rem', fontWeight: 800, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                Ajwa Tower, Payyanur
+                Payyanur New Bus Stand
               </div>
             </div>
           </a>
