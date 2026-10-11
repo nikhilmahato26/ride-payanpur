@@ -148,7 +148,17 @@ export const Footer = () => {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', fontSize: '0.86rem', color: '#BBBBBB' }}>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '10px' }}>
                 <MapPin size={17} color="#F36B21" style={{ flexShrink: 0, marginTop: '2px' }} />
-                <span>{businessInfo.address}</span>
+                <a
+                  href={businessInfo.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#BBBBBB', textDecoration: 'none', transition: 'color 0.2s' }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = '#F36B21')}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = '#BBBBBB')}
+                  title="Open parking location on Google Maps"
+                >
+                  {businessInfo.address}
+                </a>
               </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>

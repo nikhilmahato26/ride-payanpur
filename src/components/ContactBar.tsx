@@ -101,9 +101,12 @@ export const ContactBar = () => {
 
           {/* Item 3: Location */}
           <a
-            href="#contact"
+            href={businessInfo.googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             id="bar-location-link"
             className="contact-bar-item"
+            title="Open Parking Location on Google Maps"
             style={{
               display: 'flex',
               alignItems: 'center',

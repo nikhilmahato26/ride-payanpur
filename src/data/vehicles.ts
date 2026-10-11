@@ -161,7 +161,9 @@ export const businessInfo = {
   ],
   workingHours: "8:00 AM – 8:30 PM (All 7 Days)",
   officialWebsite: "ride-payyanur.grexa.site",
-  dailyKmLimit: 120
+  dailyKmLimit: 120,
+  googleMapsUrl: "https://maps.google.com/?q=12.108875,75.214989",
+  mapsEmbedUrl: "https://maps.google.com/maps?q=12.108875,75.214989&hl=en&z=17&output=embed"
 };
 
 export const createVehicleWhatsAppLink = (vehicleName: string, pricePerDay?: number): string => {

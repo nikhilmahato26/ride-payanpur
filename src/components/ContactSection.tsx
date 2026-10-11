@@ -290,8 +290,8 @@ export const ContactSection = () => {
             {/* Embedded Google Map */}
             <div style={{ position: 'relative', height: '320px', backgroundColor: '#262626' }}>
               <iframe
-                title="Ride Payyanur Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15610.963473551522!2d75.19502985!3d12.0967484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba46e274b7c126d%3A0xc48c08efbc0062a4!2sPayyanur%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                title="Ride Payyanur Parking Location Map"
+                src={businessInfo.mapsEmbedUrl}
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -318,7 +318,7 @@ export const ContactSection = () => {
               </div>
 
               <a
-                href="https://maps.google.com/?q=Payyanur+New+Bus+Stand+Kokkanisseri+Road+Payyanur"
+                href={businessInfo.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 id="contact-get-directions-btn"
@@ -326,7 +326,7 @@ export const ContactSection = () => {
                 style={{ width: '100%', justifyContent: 'center', padding: '12px' }}
               >
                 <Navigation size={16} />
-                <span>Open in Google Maps</span>
+                <span>Open Parking Location on Google Maps</span>
               </a>
             </div>
           </div>
